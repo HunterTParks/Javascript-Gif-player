@@ -11,5 +11,11 @@ Album.prototype.GetAlbums = function(artist) {
   console.log("Failing");
   });
 };
-
+// Album.prototype.GetTracks = function(artist) {
+//   $.get('http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + artist + '&api_key=' + apiKey + '&format=json').then(function(response) {
+//     DisplayAlbum(response);
+//   }).fail(function(error){
+//     console.log("Failing");
+//   });
+// }
 exports.albumModule = Albums;

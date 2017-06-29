@@ -11,10 +11,30 @@ var DisplayAlbum = function(response){
     } else if (response.topalbums.album[i].name === '(null)') {
     } else {
       $("#artist-display").append("<p>" + response.topalbums.album[i].name + "</p>");
+      console.log(response.topalbums.album[i].image[2]);
+      $("#artist-display").append("<img src = " + response.topalbums.album[i].image[2].#text + ">");
+
     }
+
 
   }
 };
+
+// var GetTracks = function(response){
+//   console.log(response);
+//   $("#artist-display").empty();
+//   for(var i = 0; i <= response.topalbums.album.length; i++)
+//   {
+//     var test = response.topalbums.album[i].name.split('');
+//     if(test[0] === "w" && test[1] === "w"){
+//     } else if (response.topalbums.album[i].name === 'undefined'){
+//     } else if (response.topalbums.album[i].name === '(null)') {
+//     } else {
+//       $("#artist-display").append("<p>" + response.topalbums.album[i].name + "</p>");
+//     }
+//
+//   }
+// }
 
 $(document).ready(function(){
   var newAlbum = new Album();
